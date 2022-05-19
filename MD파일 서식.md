@@ -67,19 +67,3 @@
 
 </div>
 </div>
-
-<style>
-    .title{
-        font-size :25px;
-        margin-bottom:10px;
-    }
-    .body {
-        border: 1px solid #ebebeb;
-        padding:30px;
-    }
-    .chapter{
-        border: 1px solid #ebebeb;
-        padding: 10px;
-        margin: 10px;
-    }
-</style>
