@@ -9,8 +9,10 @@
 <div class = body>
 
 <div align = center>
+ 
 # Resources
 </div>
+ 
 <div class = chapter>
 
 ## 주제1
@@ -34,7 +36,9 @@
 </div>
 
 <div align = center>
+ 
 # Docs
+ 
  </div>
 
 <div class = chapter>
