@@ -1,6 +1,7 @@
 <div class = title align = center>
 
-## N주차
+---
+# N주차
 
 </div>
 
