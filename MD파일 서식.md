@@ -4,6 +4,63 @@
 
 </div>
 
+
+
+<div class = body>
+
+# Resources
+
+<div class = chapter>
+
+## 주제1
+- 1번 소주제
+<ol> <!--들여쓰기-->
+공부 내용 1   <!-- 띄어쓰기 2번하면 줄바꿈 -->
+
+공부 내용 2
+</ol>
+
+- 2번 소주제
+
+ 
+</div>
+
+<div class = chapter>
+
+## 주제2
+- 
+- 
+</div>
+
+# Docs
+
+<div class = chapter>
+
+## ch01
+---
+## 주제1
+-
+## 주제2
+-
+## 주제3
+-
+
+</div>
+
+<div class = chapter>
+
+## ch02
+---
+## 주제1
+-
+## 주제2
+-
+## 주제3
+-
+
+</div>
+</div>
+
 <style>
     .title{
         font-size :25px;
@@ -19,56 +76,3 @@
         margin: 10px;
     }
 </style>
-
-
-<div class = body>
-
-# Resources
-
-<div class = chapter>
-
-### 주제1
-- 1번 소주제
-<ol>
-공부 내용
-</ol>
-
-- 2번 소주제
-
- 
-</div>
-
-<div class = chapter>
-
-### 주제2
-- 
-- 
-</div>
-
-# Docs
-
-<div class = chapter>
-
-## ch01
-
-### 주제1
--
-### 주제2
--
-### 주제3
--
-
-</div>
-
-<div class = chapter>
-
-## ch02
-### 주제1
--
-### 주제2
--
-### 주제3
--
-
-</div> 
-</div>
