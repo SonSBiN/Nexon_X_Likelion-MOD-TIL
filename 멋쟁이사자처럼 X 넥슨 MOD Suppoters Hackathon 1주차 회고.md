@@ -163,8 +163,52 @@ ex) 위의 Object에서 사다리가 가진 climbable Component 속성을 넣으
 <div class = chapter>
 
 ## 기본 개념의 이해
-- 
-- 
+- Entity, Component, Property, Service, Logic, Model 등
+- Entity는 어떤 곳에 존재하는 객체, 그 객체가 어떤일을 하는지는 Componenet, 그 어떤일을 어떤식으로, 어떤 속성을 가지고 하느냐는 Property에 의해서 결정이 된다.  
+
+- Entity: 맵을 구성하고있는 어떠한 '것'
+<ol>
+
++ 몬스터, Object, NPC, 지형 등 월드를 구성하고있는 어떠한 것 (보이지 않는것도 존재 ex Scene 메이커에 존재하는 것들도 포함. 심지어 최상위에 있는 World)
++ 각각의 Entity는 여러개의 component로 이루어져있다.
++ Scene Maker에서 부모 엔티티와 자식 엔티티가 있는데, 자식 엔티티를 부모 엔티티 안에 넣으면, 부모 엔티티를 작업했을때 자식 엔티티들도 다 같이 변한다. (배경맵을 만들때 유용함)
+</ol>
+
+- Compoenent: 어떠한 기능단위를 그 기능에 특화되게 만들어놓은 형태. Entity에 속해있고 여러가지 Component가 존재한다.
+<ol>
+
++  이것들을 추가함으로써 Entity가 그러한 기능들을 가지게 된다.
++ Workspace에 Base Environment -> NativeScripts -> MODComponent에 가면 기본적으로 제공되는 Component가 있다.
+</ol>
+
+- Property: 포탈 Component는 포탈의 기능을 부여하는것이고. 세부적인 것들 (어디로 이동할 것인지 등)을 지정하는 것이다. 고유 설정하게 하는것.
+
+- Service, Logic, Model
+
+- Component는 Entity에 속해있고 여러가지로 나타나 있지만, Service는 월드상에 딱 하나만 존재하는 어떠한 "것".
+- Service와 Logic들은 게임 내에서 딱 하나만 존재한다.
+- Service: MOD에서 Core한 부분에서, 실제로 유저가 제어하기 힘든 부분들을 제공하는 Logic들
+
+<ol>
+
++ 수정이 불가능함.
+</ol>
+
+- Logic: 게임을 돌리기위해 사용되는 게임 Logic들
+
+<ol>
+
++ 유저가 직접 작업이 가능함.
+</ol>
+
+- Model: 어떤 Entity들과 Component들의 집합체. 예를들어 도장같은 것.
+
+<ol>
+
++ 어느정도 규격화된 것들을 의미. 
++ 만들어진 Entity들로 모델로 만들 수 있다. Scene Maker에서 부모 Entity 우클릭, Make Original Model을 누른다. 
++ 만들어진 Model은 Workspace에 My Desk에 만들어져 있다.
+</ol>
 </div>
 
 <div align = center>
@@ -214,6 +258,54 @@ ex) 위의 Object에서 사다리가 가진 climbable Component 속성을 넣으
 
 ### 씬 메이커
 - 제작 현황을 계층 구조로 된 씬 메이커를 이용해 확인하고, 제작 능률을 높이는 데 사용할 수 있습니다.
+- 씬 메이커는 제작 중인 게임 현황을 계층 구조(부모-자식)로 볼 수 있는 패널입니다. 복잡하게 구성한 맵에서 원하는 엔티티를 빠르게 찾을 때 사용하거나, 체계적으로 엔티티를 관리할 때 사용합니다. 가장 상위인 World 계층 아래에 common, maps, ui 엔트리가 있으며 maps와 ui 엔트리는 각자 기본 하위 엔트리를 가지고 있습니다.
+- World
+
+<ol>
+
++ 실제로 제작에 사용한 엔티티들이 모여있으며 가장 상위 계층입니다.
+common, maps, ui가 기본 하위 엔트리로 속해 있습니다.
+제작 중인 게임의 구성 방식을 확인하고 수정할 수 있습니다.
+</ol>
+
+- Common
+
+<ol>
+
++ 게임 전체에 적용되는 룰을 만들 수 있습니다.
+컴포넌트를 추가해 사용합니다.
+</ol>
+
+- Maps
+
+<ol>
+
++ 맵에 배치한 엔티티들은 맵 엔트리 하위에 위치합니다.
+map01은 기본 하위 엔트리로 속해있습니다.
+</ol>
+
+- UI
+
+<ol>
+
++ UI 편집기에서 추가하는 엔티티들이 하위에 위치합니다.
+DefaultGroup, PopupGroup, ToastGroup이 기본 하위 엔트리로 속해있습니다.
+</ol>
+
+- 계층구조
+
+<ol>
+
++ 단방향으로 영향을 끼친다. 부모->자식
+</ol>
+
+- 씬 메이커 검색
+
+<ol>
+
++ Name: 워크스페이스의 전 영역에서 검색한 이름과 맞는 값을 찾을 때 사용합니다.
++ Component: 엔티티 중 검색어에 해당하는 컴포넌트가 포함된 값을 찾을 때 사용합니다.
+</ol>
 
 </div>
 
@@ -221,12 +313,81 @@ ex) 위의 Object에서 사다리가 가진 climbable Component 속성을 넣으
 
 ## ch02
 
-### Entity, Component, Property
--
+### Entity, Component, Property 
+- Entity: MOD 내에서 존재하는 객체이다.
+
+<ol>
+
++ Entity들이 실제 게임상에서 활동함으로써 시각적으로 보이며, 내부적으로 로직이 돌아가게 된다.
+</ol>
+
+- Component: Entity는 Component들로 구성되어 있으며, Component들의 집합체이다.
+
+<ol>
+
+ + Component는 각각의 요소를 담당하며, 각각의 기능을 담당한다.
+ + 피자를 예로 들면, 피자는 Entity에 해당되고, 피를 구성하는 토마토, 도우, 소스, 보이지 않는 조리 방법이 Component이다.
+ + 이렇게 각각을 Component로 분리하는 이유는 재사용성이 높기 때문이다.  
+ ex) 치즈 피자 = 도우 + 소스 + 치즈 + 오븐 조리  
+ 파인애플 피자 = 도우 + 소스 + 치즈 + 파인애플 + 오븐조리  
+ 냉동 불고기 피자 = 도우 + 솟 + 치즈 + 불고기 + 전자레인지 조리  
+ 이렇게 이미 만들어진 Component를 가지고 잘 조합한다면 다른 형태가 나온다.
+</ol>
+
+- Property: 각 Component의 세부사항을 설정
+
+<ol>
+
++ 위의 피자를 예로 들면, 철수는 페퍼로니가 2배 들어있는피자, 영희는 체다치즈가 아닌 모짜렐라 치즈를 원한다면, 철수는 페퍼로니 2배 Component 추가, 영희는 모짜렐라 치즈 Component 추가를 한다.
++ 하지만 재사용성이 떨어지므로 설정이 필요한 항목들을 의미하는게 Property
++ 치즈 Component에는 Size와 치즈 Type이라는 Property
++ 페퍼로니 Component에는 Size라는 Property가 있다면, 같은 Component를 이용해 피자를 만들 수 있다. 물론 각각의 Property는 다르다.
+</ol>
+
 ### Model
--
+- 나무 Entity를 만들고, Component를 추가하고, Property를 수정해서 원하는 Entity를 만들었다.
+- 여러개의 나무를 모아서 숲을 만들고 싶을때, 4개의 나무를 만들면 각각 Entity 생성, Component추가, Property 수정 4번을 해야한다.
+- 하지만 이 행위를 100번하면? -> 안된다
+- 따라서 이 나무를 찍어내는 도장(Model)을 생성한다.
+- 모델화: 많이 찍어내고 싶은 Entity를 모델화 해서 그 모델을 사용한다.
+- 모델화는 우클릭 - Make Original Model
+
 ### 컴포넌트 추가와 삭제
--
+- Component: 엔티티의 정체성을 결정하는 역할.
+- MAP, UI, Player, Etc 4가지 항목이 있다.
+- Component 종류
+![component 종류](images/Component%20%EC%A2%85%EB%A5%98.JPG)
+- Component 추가 방법
+
+<ol>
+
++ Property 창 하단의 'Add component'
++ 추가할 컴포넌트를 검색, 선택한다.
++ Property 창에 선택한 컴포넌트가 추가되었는지 확인한다.
+</ol>
+
+- Component 초기화
+<ol>
+
++ Context Menu를 열고, 'Reset All Component"를 선택해 컴포넌트의 Property 값을 초기화 한다.
+![Component 초기화](images/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EA%B0%92%20%EC%B4%88%EA%B8%B0%ED%99%94.png)
+</ol>
+
+- Component 상태 변경
+<ol>
+
+ + 컴포넌트는 추가와 동시에 자동으로 활성화 된다.
+ + 필요할때 체크박스를 이용해 간단하게 활성 혹은 비활성 상태로 변경이 가능하다.
+ ![Component 상태변경](images/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EC%83%81%ED%83%9C%20%EB%B3%80%EA%B2%BD.png)
+ + 컴포넌트명 옆에 컨텍스트 메뉴를 열고, 'Disable Component'를 선택해서 비활성화 할 수 있다.
+</ol>
+
+- Component 삭제
+<ol>
+
++ 컨텍스트 메뉴를 열고, 'Remove Component'를 선택해 컴포넌트를 삭제한다.
+![Component 삭제](images/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EC%82%AD%EC%A0%9C.png)
+</ol>
 
 </div>
 </div>
