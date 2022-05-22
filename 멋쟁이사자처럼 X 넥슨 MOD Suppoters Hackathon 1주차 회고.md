@@ -4,18 +4,11 @@
 # 1주차
 
 </div>
-
-
-
-<div class = body>
-
 <div align = center>
  
 # Resources
 </div>
  
-<div class = chapter>
-
 ## 기본의 이해
 - 상단 메뉴
 <ol> <!--들여쓰기-->
@@ -158,9 +151,6 @@ ex) 위의 Object에서 사다리가 가진 climbable Component 속성을 넣으
 + 객체가 가지고 있는 속성들을 그대로 두고, 이미지만 바꾸고 싶다면, Property -> SpriteRendererComponent-> SpriteRUID 를 클릭하면 Sprite Picker가 뜬다. 거기에 있는 다른 이미지로 교체가 가능하다.
 + 혹은 다른 객체를 불러와서 그것의 RUID값을 복사한뒤 붙여넣으면 바뀐다.
 </ol>
-</div>
-
-<div class = chapter>
 
 ## 기본 개념의 이해
 - Entity, Component, Property, Service, Logic, Model 등
@@ -209,15 +199,12 @@ ex) 위의 Object에서 사다리가 가진 climbable Component 속성을 넣으
 + 만들어진 Entity들로 모델로 만들 수 있다. Scene Maker에서 부모 Entity 우클릭, Make Original Model을 누른다. 
 + 만들어진 Model은 Workspace에 My Desk에 만들어져 있다.
 </ol>
-</div>
 
 <div align = center>
  
 # Docs
  
  </div>
-
-<div class = chapter>
 
 ## ch01
 
@@ -307,10 +294,6 @@ DefaultGroup, PopupGroup, ToastGroup이 기본 하위 엔트리로 속해있습�
 + Component: 엔티티 중 검색어에 해당하는 컴포넌트가 포함된 값을 찾을 때 사용합니다.
 </ol>
 
-</div>
-
-<div class = chapter>
-
 ## ch02
 
 ### Entity, Component, Property 
@@ -389,5 +372,3 @@ DefaultGroup, PopupGroup, ToastGroup이 기본 하위 엔트리로 속해있습�
 ![Component 삭제](images/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EC%82%AD%EC%A0%9C.png)
 </ol>
 
-</div>
-</div>
