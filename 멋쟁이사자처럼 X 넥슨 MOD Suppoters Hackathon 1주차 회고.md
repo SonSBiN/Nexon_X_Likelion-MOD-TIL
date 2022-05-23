@@ -338,7 +338,7 @@ DefaultGroup, PopupGroup, ToastGroup이 기본 하위 엔트리로 속해있습�
 ### 컴포넌트 추가와 삭제
 - Component: 엔티티의 정체성을 결정하는 역할.
 - MAP, UI, Player, Etc 4가지 항목이 있다.
-- Component 종류
+- Component 종류  
 ![component 종류](images/Component%20%EC%A2%85%EB%A5%98.JPG)
 - Component 추가 방법
 
@@ -352,7 +352,7 @@ DefaultGroup, PopupGroup, ToastGroup이 기본 하위 엔트리로 속해있습�
 - Component 초기화
 <ol>
 
-+ Context Menu를 열고, 'Reset All Component"를 선택해 컴포넌트의 Property 값을 초기화 한다.
++ Context Menu를 열고, 'Reset All Component"를 선택해 컴포넌트의 Property 값을 초기화 한다.  
 ![Component 초기화](images/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EA%B0%92%20%EC%B4%88%EA%B8%B0%ED%99%94.png)
 </ol>
 
@@ -360,7 +360,7 @@ DefaultGroup, PopupGroup, ToastGroup이 기본 하위 엔트리로 속해있습�
 <ol>
 
  + 컴포넌트는 추가와 동시에 자동으로 활성화 된다.
- + 필요할때 체크박스를 이용해 간단하게 활성 혹은 비활성 상태로 변경이 가능하다.
+ + 필요할때 체크박스를 이용해 간단하게 활성 혹은 비활성 상태로 변경이 가능하다.  
  ![Component 상태변경](images/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EC%83%81%ED%83%9C%20%EB%B3%80%EA%B2%BD.png)
  + 컴포넌트명 옆에 컨텍스트 메뉴를 열고, 'Disable Component'를 선택해서 비활성화 할 수 있다.
 </ol>
@@ -368,7 +368,7 @@ DefaultGroup, PopupGroup, ToastGroup이 기본 하위 엔트리로 속해있습�
 - Component 삭제
 <ol>
 
-+ 컨텍스트 메뉴를 열고, 'Remove Component'를 선택해 컴포넌트를 삭제한다.
++ 컨텍스트 메뉴를 열고, 'Remove Component'를 선택해 컴포넌트를 삭제한다.  
 ![Component 삭제](images/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EC%82%AD%EC%A0%9C.png)
 </ol>
 
