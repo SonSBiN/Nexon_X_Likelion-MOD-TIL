@@ -139,8 +139,8 @@ QuaterView() 에서는 가속도 등 자유롭게 설정 가능.
 - Transform Component 함수의 활용
 <ol>
 
-+ Translate 함수
-![Translate 함수](/images/Translate%20%ED%95%A8%EC%88%98.png)
++ Translate 함수  
+![Translate 함수](/images/Translate%20%ED%95%A8%EC%88%98.png)  
 + Rotate 함수 ![Rotate 함수](images/Rotate%20%ED%95%A8%EC%88%98.png)
 </ol>
 
@@ -148,14 +148,16 @@ QuaterView() 에서는 가속도 등 자유롭게 설정 가능.
 ### 스프라이트 색상 조정
 - 스프라이트의 색상을 조정할 수 있다.
 - Sprite: 2D 이미지를 스프라이트라 칭합니다. 스프라이트는 위치, 크기, 회전 등을 변경할 수 있다.  
-스프라이트는 고유한 RUID값이 있고, 이 값을 이용해 간편하게 빈 모델에 스프라이트를 넣거나 변경할 수 있다. ![MOD의 리소스 이용하기](images/MOD%EC%9D%98%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.png)
-- 웹에 있는 이미지의 URL을 이용하여 Web Sprite로 사용할 수 있다. 단, 직접 제작한 이미지나 MOD가 제공하는 리소스가 아닌 경우 사용이 가능한지와 활용 범위를 반드시 확인해야 한다. ![Web Sprite](images/Web%20Sprite.png)
+스프라이트는 고유한 RUID값이 있고, 이 값을 이용해 간편하게 빈 모델에 스프라이트를 넣거나 변경할 수 있다.  
+![MOD의 리소스 이용하기](images/MOD%EC%9D%98%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0.png)
+- 웹에 있는 이미지의 URL을 이용하여 Web Sprite로 사용할 수 있다. 단, 직접 제작한 이미지나 MOD가 제공하는 리소스가 아닌 경우 사용이 가능한지와 활용 범위를 반드시 확인해야 한다.  
+![Web Sprite](images/Web%20Sprite.png)
 - 스프라이트 색상 조정: SpriteRendererComponent와 WebSpriteComponent의 Color Property에서 이미지의 색, 명도, 채도, 투명도를 조정할 수 있습니다.
 <br></br>
 
 ## ch04
 ### 발판 만들기
-- Foothold 모델로 발판 만들기  
+- Foothold 모델로 발판 만들기    
 ![Foothold 모델로 발판 만들기](images/Foothold%20%EB%AA%A8%EB%8D%B8%EB%A1%9C%20%EB%B0%9C%ED%8C%90%20%EB%A7%8C%EB%93%A4%EA%B8%B0.png)
 - 새로운 발판 만들기
 <ol>
@@ -170,13 +172,13 @@ Foothold에 원하는 모델이 없을 때, 직접 새로운 풋홀드를 만들
 
 + 발판 경로 그리기  
 ![발판 경로 그리기](images/%EB%B0%9C%ED%8C%90%20%EA%B2%BD%EB%A1%9C%20%EA%B7%B8%EB%A6%AC%EA%B8%B0.png)
-+ 발판에 속성 부여하기
++ 발판에 속성 부여하기  
 ![발판에 속성 부여하기](images/%EB%B0%9C%ED%8C%90%EC%97%90%20%EC%86%8D%EC%84%B1%20%EB%B6%80%EC%97%AC%ED%95%98%EA%B8%B0.png)
 </ol>
 
 ### 맵 레이어
 - 맵 레이어를 사용해 입체적으로 게임 화면을 디자인 할 수 있다.
-- 맵 레이어 위치
+- 맵 레이어 위치  
 ![맵 레이어 위치](images/%EB%A7%B5%20%EB%A0%88%EC%9D%B4%EC%96%B4%20%EC%9C%84%EC%B9%98.png)
 - 맵 레이어 이해하기
 <ol>
@@ -205,7 +207,7 @@ Foothold에 원하는 모델이 없을 때, 직접 새로운 풋홀드를 만들
 다른 엔티티는 움직임과 관계 없이 처음 배치된 맵 레이어에만 속하는 것과 다르게, 플레이어 아바타는 실시간으로 밟고 있는 엔티티(타일, 발판 등)가 속한 맵 레이어를 기준으로 소속을 끊임 없이 바꿉니다.
 + ex1)  
 ![맵 레이어와 플레이어 아바타 관계](images/%EB%A7%B5%20%EB%A0%88%EC%9D%B4%EC%96%B4%EC%99%80%20%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%20%EC%95%84%EB%B0%94%ED%83%80%20%EA%B4%80%EA%B3%84%20%EC%98%88%EC%8B%9C%201.png)
-+ ex2)
++ ex2)  
 ![맵 레이어와 플레이어 아바타 관계2](images/%EB%A7%B5%20%EB%A0%88%EC%9D%B4%EC%96%B4%EC%99%80%20%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%20%EC%95%84%EB%B0%94%ED%83%80%20%EA%B4%80%EA%B3%84%20%EC%98%88%EC%8B%9C%202.png)
 </ol>
 
@@ -240,10 +242,10 @@ TweenComponent를 이용하여 엔티티에 운동성을 만들고, 세부 설�
 + 종류: Quad, Expo, Cubic, Quart, Quint, Circ, Sine, Elastic, Bounce, Back
 + Ease Out: 빠르게 움직이기 시작해서 마지막에 감속하며 목적지에서 멈춥니다.
 + Ease In: 느리게 움직이기 시작하다 가속하며 목적지에서 멈춥니다.
-+ Base In-Out: 느리게 움직이기 시작해 중간 구간에서 빠르게 움직이다, 감속하며 목적지에서 멈춥니다.
++ Base In-Out: 느리게 움직이기 시작해 중간 구간에서 빠르게 움직이다, 감속하며 목적지에서 멈춥니다.  
 
-![TweenType_1](images/TweenType_1.png)
-![TweenType_2](images/TweenType_2.png)
+![TweenType_1](images/TweenType_1.png)  
+![TweenType_2](images/TweenType_2.png)  
 ![TweenType_3](images/Tweentype_3.png)
 
 </ol>
@@ -256,12 +258,12 @@ TweenComponent를 이용하여 엔티티에 운동성을 만들고, 세부 설�
 1. Workspace에서 Player 선택
 2. Player의 모델 프로퍼티 값 변경
 3. 시작을 눌러 변경사항 확인.
-+ Player Property
-![Player Property 1](images/Player%20Property1.png)
++ Player Property  
+![Player Property 1](images/Player%20Property1.png)  
 ![Player Property 2](images/Player%20Property2.png)
 </ol>
 
-- Model Property 비활성화
+- Model Property 비활성화  
 ![Model Property 비활성화](images/Model%20Property%20%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%94.png)
 - DefaultPlayer의 기본 컴포넌트 삭제하기.
 <ol>
@@ -269,7 +271,7 @@ TweenComponent를 이용하여 엔티티에 운동성을 만들고, 세부 설�
 기본 컴포넌트를 확장한 컴포넌트를 제작해 사용한다면, DefaultPlayer의 기본 컴포넌트를 삭제해야 합니다. 근본이 같은 컴포넌트가 여러 개 있으면 오동작 가능성이 커지기 때문에 기본적으로 하나의 컴포넌트만 사용하는 것을 권장한다.
 + 컴포넌트 특성에 따라 확장한 컴포넌트 여러 개를 함께 활용할 수도 있습니다.
 + 컴포넌트의 동작 방식이 각각 다르므로 비활성화만 하는 것은 권장하지 않습니다.
-오동작 가능성은 낮지만, 스크립트 작성 중 컴포넌트 명이 헷갈리거나 작성한 대로 동작하지 않고 오류가 날 가능성이 있기 때문입니다.
+오동작 가능성은 낮지만, 스크립트 작성 중 컴포넌트 명이 헷갈리거나 작성한 대로 동작하지 않고 오류가 날 가능성이 있기 때문입니다.  
 ![DefaultPlayer의 기본 컴포넌트 삭제](images/DefaultPlayer%EC%9D%98%20%EA%B8%B0%EB%B3%B8%20%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%20%EC%82%AD%EC%A0%9C.png)
 </ol>
 
@@ -284,17 +286,17 @@ TweenComponent를 이용하여 엔티티에 운동성을 만들고, 세부 설�
 <ol>
 
 세부적인 충돌체의 크기, 위치, 형태 등은 충돌체를 지닌 컴포넌트의 프로퍼티를 통해 설정할 수 있습니다.
-- Collider
+- Collider  
 ![Collider](images/Collider.png)
-- BoxOffset과 ColliderOffset
+- BoxOffset과 ColliderOffset  
 ![BoxOffset과 ColliderOffset](images/BoxOffset%EA%B3%BC%20ColliderOffset.png)
-- BoxSize
+- BoxSize  
 ![BoxSize](images/BoxSize.png)
--CircleRadius
+-CircleRadius  
 ![CircleRadius](images/CircleRadius.png)
-- ColliderType
+- ColliderType  
 ![ColliderType](images/ColliderType.png)
-- IsLegacy
+- IsLegacy  
 ![IsLegacy](images/IsLegacy.png)
 </ol>
 
@@ -324,15 +326,15 @@ A와 B에는 TriggerComponent가 추가되어 있어서 두 엔티티가 충돌�
 + Entity Event System을 이용한 충돌 시 액션 추가
 <ol>
 
-- 구조
+- 구조  
 ![Entity Event System 구조](images/Entity%20Event%20System%20%EA%B5%AC%EC%A1%B0.png)
-- 핸들러의 추가
+- 핸들러의 추가  
 ![Entity Event System 핸들러의 추가](images/Entity%20Event%20System%20%ED%95%B8%EB%93%A4%EB%9F%AC%EC%9D%98%20%EC%B6%94%EA%B0%80.png)
-- 핸들러 Event
+- 핸들러 Event  
 ![Entity Event System 핸들러 Event](images/Entity%20Event%20System%20%ED%95%B8%EB%93%A4%EB%9F%AC%20Event.png)
-- 충돌 이벤트 샌더 설정
+- 충돌 이벤트 샌더 설정  
 ![Entity Event System 충돌 이벤트 샌더 설정](images/Entity%20Event%20System%20%EC%B6%A9%EB%8F%8C%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%83%8C%EB%8D%94%20%EC%84%A4%EC%A0%95.png)
-- 핸들러 구성
+- 핸들러 구성  
 ![Entity Event System 핸들러 구성](images/Entity%20Event%20System%20%ED%95%B8%EB%93%A4%EB%9F%AC%20%EA%B5%AC%EC%84%B1.png)
 </ol>
 
@@ -340,15 +342,15 @@ A와 B에는 TriggerComponent가 추가되어 있어서 두 엔티티가 충돌�
 <ol>
 
 + TriggerComponent의 함수를 오버라이딩하여 충돌 처리를 추가하는 방법
-+ 구조
++ 구조  
 ![확장 TriggerComponent를 활용한 충돌 처리 구조](images/%ED%99%95%EC%9E%A5%20TriggerComponent%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%B6%A9%EB%8F%8C%20%EC%B2%98%EB%A6%AC%20%EA%B5%AC%EC%A1%B0.png)
-+ TriggerComponent 확장
++ TriggerComponent 확장  
 ![확장 TriggerComponent를 활용한 충돌 처리 TriggerComponent 확장](images/%ED%99%95%EC%9E%A5%20TriggerComponent%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%B6%A9%EB%8F%8C%20%EC%B2%98%EB%A6%AC%20TriggerComponent%20%ED%99%95%EC%9E%A5.png)
-+ 함수 오버라이드
++ 함수 오버라이드  
 ![확장 TriggerComponent를 활용한 충돌 처리 함수 오버라이드](images/%ED%99%95%EC%9E%A5%20TriggerComponent%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%B6%A9%EB%8F%8C%20%EC%B2%98%EB%A6%AC%20%ED%95%A8%EC%88%98%20%EC%98%A4%EB%B2%84%EB%9D%BC%EC%9D%B4%EB%93%9C.png)
-+ 함수 종류
++ 함수 종류  
 ![확장 TriggerComponent를 활용한 충돌 처리 함수 종류](images/%ED%99%95%EC%9E%A5%20TriggerComponent%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%B6%A9%EB%8F%8C%20%EC%B2%98%EB%A6%AC%20%ED%95%A8%EC%88%98%20%EC%A2%85%EB%A5%98.png)
-+ 파라미터
++ 파라미터  
 ![확장 TriggerComponent를 활용한 충돌 처리 파라미터](images/%ED%99%95%EC%9E%A5%20TriggerComponent%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%B6%A9%EB%8F%8C%20%EC%B2%98%EB%A6%AC%20%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0.png)
 </ol>
 </ol>
