@@ -141,6 +141,7 @@ QuaterView() 에서는 가속도 등 자유롭게 설정 가능.
 
 + Translate 함수  
 ![Translate 함수](/images/Translate%20%ED%95%A8%EC%88%98.png)
+
 + Rotate 함수  
 ![Rotate 함수](images/Rotate%20%ED%95%A8%EC%88%98.png)
 </ol>
