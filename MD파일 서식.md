@@ -4,29 +4,24 @@
 
 </div>
 
+<br></br>
+
 <div align = center>
  
 # Resources
 </div>
  
 ## 주제1
-- 1번 소주제
-<ol>
-
-공부 내용 1
-
-공부 내용 2
-</ol>
-
-- 2번 소주제
-
+-
 
 ## 주제2
 - 
-- 
+
+<br></br>
+<br></br>
 
 <div align = center>
- 
+
 # Docs
  
  </div>
@@ -39,6 +34,8 @@
 -
 ### 주제3
 -
+
+<br></br>
 
 ## ch02
 
