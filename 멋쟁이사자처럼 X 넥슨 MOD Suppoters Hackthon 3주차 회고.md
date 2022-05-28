@@ -16,7 +16,8 @@
 - Workspace->MyDesk에서 원하는 스크립트를 제작 후 사용한다.
 - 반복문 사용
 <ol>
-*1부터 10까지 log 찍는 행위를 반복
+
+*1부터 10까지 log 찍는 행위를 반복  
 for count = 1, 10, 1 do 
 <ol>
     log(count)
@@ -195,7 +196,7 @@ Multicast: client에도 보내고, server에도 보내는 것.
 
 + 마우스 오버를 이용해 변수나 프로퍼티의 값을 확인하는 방법은 간편하게 값을 하나씩 확인하기엔 편리하지만, 코드가 한 줄씩 실행될 때마다 특정 변숫값이 어떻게 변하는지 알고 싶을 때는 계속 마우스를 올려 확인해야 하므로 상당히 불편합니다.  
 Watcher Watch Expression은 프로퍼티/함수 내부나 선언된 변수를 Watch Expression에 등록해 코드가 실행될 때마다 값이 어떻게 변경되는지 추적할 수 있어 매우 편리합니다.
-+ Watch Expression 창 오픈
++ Watch Expression 창 오픈  
 ![Watch Expression 창 오픈](images/Watch%20Expression%20%EC%B0%BD%20%EC%98%A4%ED%94%88.png)
 + 디버깅 중 값을 알고자 하는 변수나 프로퍼티 명을 Add Expression에 작성합니다.
 + Watch Expression에 변수나 프로퍼티가 등록되면, 코드를 한 줄씩 실행하며 다음과 같이 값의 변화를 추적할 수 있습니다.  
