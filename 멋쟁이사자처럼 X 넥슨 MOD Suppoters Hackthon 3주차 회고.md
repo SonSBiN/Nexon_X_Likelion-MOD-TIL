@@ -11,11 +11,114 @@
 # Resources
 </div>
  
-## 스크립트의 이해
-- 
+### 스크립트의 이해
+- 대부분의 Lua 문법을 다룬다. (Lua 문법 + 추가된 형태)
+- Workspace->MyDesk에서 원하는 스크립트를 제작 후 사용한다.
+- 반복문 사용
+<ol>
+*1부터 10까지 log 찍는 행위를 반복
+for count = 1, 10, 1 do 
+<ol>
+    log(count)
+</ol>
+end
+</ol>
 
-## 네트워크의 이해
--  
+- 조건 분기문
+<ol>
+
+if 조건 then
+<ol>
+
+행동 
+</ol>
+end
+</ol>
+
+- Logic
+<ol>
+
++ Logic은 World상에 딱 하나만 존재하기때문에, Log 함수를 실행할 때 로그가 나온다. 하지만 Component에서 출력하는 Log는 해당 Component를 쓰는 Entity가 있어야 한다.
+</ol>
+
+- Component
+<ol>
+
++ Component는 Log를 출력하는 함수가 있을경우, 해당 Component를 가지고 있는 Entity수에 따라 출력된다.
+</ol>
+
+- function: 어떠한 기능들을 모아놓은 것.
+<ol>
+
++ C언어의 함수와 다를바가 없다.
++ 기본적은 함수가 있다.
++ 주로 사용하는 함수는 OnBeginPlay, OnUpdate, OnEndPlay
++ 컴포넌트가 초기화될때 OnBeginPlay, 끝날때 OnEndPlay, 주기적으로 사용하는게 OnUpdate
++ 자기자신을 호출시엔 self. 사용
++ 자신의 Component 내의 함수 호출시엔 self:함수 사용
++ Component가 달려있는 Entity 접근방법:  
+self.Entity.~~
++ 자신의 위치의 좌표를 받아오는 방법:  
+local myEntityPosition = self.Entity.Transformcomponent.Position
++ 위치를 조작하는 방법 (1초에 1번씩 x좌표를 0.5증가)
+<ol>  
+for count=1, 5, 1 do  
+<ol>
+
+myEntityPosition.x = myEntityPosition.x + 0.5
+wait(1)
+</ol>
+end
+
+</ol>
+</ol>
+
+### 네트워크의 이해
+
+- 동기화
+<ol>
+
+- MOD에선 기본적으로 1개의 Server와 다수의 Client가 있다.
+- Entity를 생성시, Server에도 존재하고 Client에도 존재한다. (각각 하나씩 추가가 되는 개념)
+- Server, 혹은 Client에서 값을 바꾸는데, 두개가 동시에 변하지 않는다면, 문제가 된다. 따라서 각각 바꾸게되면 서로의 값을 맞추는 작업을 한다.  
+->이게 동기화
+- MOD에서 Property는 동기화 옵션을 해준다.
+- 변수 위에 [Sync] 라고 되어있으면 동기화, 클릭시 [None] 으로 바뀌는데 그러면 동기화X
+- any, table 등, 동기화, 비동기화를 바꿀수 없는것도 존재.
+- Server는 1개지만 Client는 여러개가 가능하다.
+- Server에서 값을 바뀌면, Client의 값은 다 같이 바뀐다. (Server는 1개라서 권한을 가진다.)
+- 반대의 상황에서는 안된다. => 동기화의 방향은 항상 단방향 (Server -> Client)
+- OnSyncProperty라는 함수는, Client 기준으로만 작성을해서, 여기서 조작시에는 해당 Client에서만 적용이 된다.
+</ol>
+
+- Function의 공간, 실행제어
+<ol>
+
++ 해당 함수가, Server와 Client 모두에서 실행 가능한데, 이것을 Server만 실행을 하는 함수인지, Client만 실행을 하게 하는 함수인지 정하는것.
++ 5가지: Server, Client, ServerOnly, Client Only, multicast
++ ServerOnly, ClientOnly: 각각 서버와 ,클라이언트에서만 실행할 수 있게 하는것.
++ Server, Client: 이 함수가 Server 혹은 Client에서 돌아가야한다.  
+client는 func가 server에서 불리면, 자동으로 client쪽으로 패킷을 보내서 통신을 해서 client가 호출이 되게한다.  
+server는 이 함수가 client에서 불렸다 하더라도, server에 보내서 실행하라.  
+Multicast: client에도 보내고, server에도 보내는 것.
++ Timming이 있는데, server에서는 server순서대로 코드를 읽어나가는데, client에서 요청을 보내는 시간안에, server에서 다른것을 실행하면, 더 늦게 올 수 있다.  
+1. log("begin play")
+2. server() 
+3. client()
+4. log("end play")
++ 실행시
+1. begin play
+2. server()
+3. end play
+4. client
++ 순서대로 찍힌다. 따라서 타이밍 이슈가 있으므로, 언제 넘어가서 언제 넘어오는지 등 잘 고려해서 코딩해야함.
++ Client 내에서만 생성하고싶은 Entity가 있음 ex) UI, HP, 입력 등
++ 위와 같은것들은 "나"를 위한 것들이므로, Client에서만 관리를 한다.
++ Effect는 경우에 따라서, 서버에서 제어를 한다.  
+근데, 특정 이펙트를 한 Client에서만 보이게 하고싶을때는 Local Entity를 사용한다.
++ 최적화할때, Client 쪽 logic를 사용한다.
++ 어쨋든 입력과 UI관련은 Client에서 제어를 한다.
+</ol>
 
 <br></br>
 <br></br>
