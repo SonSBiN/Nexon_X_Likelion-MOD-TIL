@@ -29,7 +29,7 @@ HandleKeyDownEvent, HandleFootholdCollisionEvent, HandleTouchEvent, HandleScreen
 + 기존 Component 우클릭 -> Extend(확장)
 + 이것은 기존 Component에서 확장한 형태를 가진다.  
 이것은 기존 Component가 가지고 있는 모든 Property를 다 가진 상태로, 추가적으로 붙여서 확장 처리를 할 수 있다.
-+ ovveridable 함수를 이용해서 구현하게 되면, 원래 있는 함수 대신에, 내가 바꾼 함수를 실행하게 할 수 있다.
++ overidable 함수를 이용해서 구현하게 되면, 원래 있는 함수 대신에, 내가 바꾼 함수를 실행하게 할 수 있다.
 </ol>
 
 <br></br>
