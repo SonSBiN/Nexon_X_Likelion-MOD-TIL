@@ -12,7 +12,7 @@
 </div>
  
 ## Event와 컴포넌트 확장
--
+- 
 
 <br></br>
 <br></br>
@@ -110,7 +110,7 @@ Sunrise 상태일 때의 로직을 구현하기 위해 다음과 같이 워크�
 이제는 각자 받은 SunriseEvent를 처리하는 로직을 넣어야 합니다.  
 Hunter의 경우에는 Hp 회복 로직을, Vampire의 경우에는 Hp 감소 로직을 넣어줍니다.  
 먼저, 해가 뜨면 Hp가 증가하는 HunterComponent 예제입니다.  
-![핸들러 로직 예제 Sunrise시 Hp증가](images/%ED%95%B8%EB%93%A4%EB%9F%AC%20%EB%A1%9C%EC%A7%81%20Sunrise%EC%8B%9C%20Hp%EC%A6%9D%EA%B0%80.png)
+![핸들러 로직 예제 Sunrise시 Hp증가](images/%ED%95%B8%EB%93%A4%EB%9F%AC%20%EB%A1%9C%EC%A7%81%20Sunrise%EC%8B%9C%20Hp%EC%A6%9D%EA%B0%80.png)  
 해가 뜨면 Hp가 감소하는 VampireComponent 예제  
 ![핸들러 로직 예제 Sunrise시 Hp감소](images/%ED%95%B8%EB%93%A4%EB%9F%AC%20%EB%A1%9C%EC%A7%81%20%EC%98%88%EC%A0%9C%20Sunrise%EC%8B%9C%20Hp%EA%B0%90%EC%86%8C.png)
 + 스크립트 작성 완료 후, Vampire 엔티티와 Hunter 엔티티를 선택한 후 Property Editor에서 Hp값을 100으로 설정.
