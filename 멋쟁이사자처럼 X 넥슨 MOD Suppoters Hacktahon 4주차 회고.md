@@ -12,7 +12,25 @@
 </div>
  
 ## Event와 컴포넌트 확장
-- 
+- Event란 어떤 객체와 객체간의 주고받는 형식 
+- MOD에서는 Entity Event System을 지원한다.
+- Entity는 다수의 Component를 지니고있고, 이 component들로 제어를 합니다.
+- 자신의 Entity안의 컴포넌트 접근, Entity간 컴포넌트 접근
+- Entity Event Modler 에서는 여러 이벤트가 발생했을때 처리할 수 있음.
+- Script에서 Script로 이벤트 쏘기
+- Native에서 Script로 이벤트 쏘기
+- Native-> Script 예시  
+HandleKeyDownEvent, HandleFootholdCollisionEvent, HandleTouchEvent, HandleScreenTouchEvent
+- Script에서도 Native쪽으로 이벤트를 쏠 수 있다.
+- Native Component와 Script Component가 분리되어있고, 그것을 연결하는게 Event도 있지만, 다른 하나가 더 있다.
+- Component 확장
+<ol>
+
++ 기존 Component 우클릭 -> Extend(확장)
++ 이것은 기존 Component에서 확장한 형태를 가진다.  
+이것은 기존 Component가 가지고 있는 모든 Property를 다 가진 상태로, 추가적으로 붙여서 확장 처리를 할 수 있다.
++ ovveridable 함수를 이용해서 구현하게 되면, 원래 있는 함수 대신에, 내가 바꾼 함수를 실행하게 할 수 있다.
+</ol>
 
 <br></br>
 <br></br>
