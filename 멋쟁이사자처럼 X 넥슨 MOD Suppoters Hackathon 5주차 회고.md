@@ -29,7 +29,7 @@ self.entity.enable = false 아이템을 먹은것처럼 하는것 (사라지게�
 - SpriteRendererCompoennt: 대표적인 display Component. Sprite가 아닌 비슷한 것을 수행하는 component가 존재한다. 
 - WebSpriteComponent: 웹에 있는 이미지를 경로를 따와서 가져올 수 있다. 애니메이션도 설정 가능
 - YoutubeComponent: 유튜브의 주소를 가져오면, 해당 영상을 스트리밍 해준다.
-- AvatarRendererComponent, CostumeManagerComponent: 캐릭터의 옷,피부, 등을 설정할 수 있는 Component
+- AvatarRendererComponent, CostumeManagerComponent: 캐릭터의 옷,피부, 등을 설정할 수 있는 Component 
 
 </ol>
 
