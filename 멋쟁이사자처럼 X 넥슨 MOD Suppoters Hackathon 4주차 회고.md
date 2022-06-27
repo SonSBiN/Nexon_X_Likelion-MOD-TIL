@@ -131,7 +131,7 @@ Hunter의 경우에는 Hp 회복 로직을, Vampire의 경우에는 Hp 감소 �
 ![핸들러 로직 예제 Sunrise시 Hp증가](images/%ED%95%B8%EB%93%A4%EB%9F%AC%20%EB%A1%9C%EC%A7%81%20Sunrise%EC%8B%9C%20Hp%EC%A6%9D%EA%B0%80.png)  
 해가 뜨면 Hp가 감소하는 VampireComponent 예제  
 ![핸들러 로직 예제 Sunrise시 Hp감소](images/%ED%95%B8%EB%93%A4%EB%9F%AC%20%EB%A1%9C%EC%A7%81%20%EC%98%88%EC%A0%9C%20Sunrise%EC%8B%9C%20Hp%EA%B0%90%EC%86%8C.png)
-+ 스크립트 작성 완료 후, Vampire 엔티티와 Hunter 엔티티를 선택한 후 Property Editor에서 Hp값을 100으로 설정.
++ 스크립트 작성 완료 후, Vampire 엔티티와 Hunter 엔티티를 선택한 후 Property Editor에서 Hp값을 100으로 설정. 
 </ol>
 
 - 이벤트 발생 로직
